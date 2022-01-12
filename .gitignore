@@ -5,3 +5,8 @@
 #   git config --global core.excludesfile '~/.gitignore_global'
 
 bin/althttpd
+
+repositories/*.fossil
+
+default.website/*
+!default.website/index.html
