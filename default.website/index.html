@@ -1,0 +1,25 @@
+#!//bin/sh
+
+echo "Content-type: text/html"
+echo
+cat - << EOFHTML
+
+<html>
+  <head><title>Index</title></head>
+  <body>
+    <h3>Index</h3>
+    <ol>
+EOFHTML
+
+for d in */; do
+  if [ -d "$d" ]; then
+    echo "<li><a href='$d'>$d</a></li>"
+  fi
+done
+
+cat - << EOFHTML
+    </ol>
+  </body>
+</html>
+
+EOFHTML

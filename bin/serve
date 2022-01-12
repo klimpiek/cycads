@@ -1,0 +1,4 @@
+#!/bin/sh
+PORT=8080
+echo "althttpd start with port $PORT"
+bin/althttpd -root `pwd` -port $PORT
